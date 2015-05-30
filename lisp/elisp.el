@@ -6,7 +6,6 @@
   (let ((table (make-syntax-table)))
     (modify-syntax-entry ?_ "w" table)
     (modify-syntax-entry ?- "w" table)
-    (modify-syntax-entry ?/ "w" table)
     table))
 
 (add-hook 'emacs-lisp-mode-hook (lambda ()

@@ -15,5 +15,12 @@
 (load "~/.emacs.d/lisp/backup.el")
 (load "~/.emacs.d/lisp/ace_jump_mode.el")
 
+
 ;; Remove trailing whitespaces
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; I prefer cmd key for meta
+(setq mac-option-key-is-meta nil
+      mac-command-key-is-meta t
+      mac-command-modifier 'meta
+      mac-option-modifier 'none)
