@@ -8,8 +8,9 @@
 (depends-on "evil")
 (depends-on "evil-leader")
 (depends-on "evil-lisp-state")
+(depends-on "ace-jump-mode")
+;; (depends-on "evil-surround")
 (depends-on "ido-vertical-mode")
-;; (depends-on "tsdh-light-theme") not found
 (depends-on "base16-theme")
 (depends-on "osx-clipboard")
 ;; (depends-on "drag-stuff")

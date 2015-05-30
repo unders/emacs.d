@@ -13,9 +13,7 @@
 (load "~/.emacs.d/lisp/clipboard.el")
 (load "~/.emacs.d/lisp/guide_key.el")
 (load "~/.emacs.d/lisp/backup.el")
+(load "~/.emacs.d/lisp/ace_jump_mode.el")
 
-
- 
-
-
-
+;; Remove trailing whitespaces
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
