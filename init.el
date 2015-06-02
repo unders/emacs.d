@@ -5,6 +5,7 @@
 (load "~/.emacs.d/lisp/evil.el")
 (load "~/.emacs.d/lisp/evil_lisp_state.el")
 (load "~/.emacs.d/lisp/elisp.el")
+(load "~/.emacs.d/lisp/edit.el")
 (load "~/.emacs.d/lisp/ido.el")
 (load "~/.emacs.d/lisp/fonts.el")
 (load "~/.emacs.d/lisp/themes.el")
@@ -14,13 +15,22 @@
 (load "~/.emacs.d/lisp/guide_key.el")
 (load "~/.emacs.d/lisp/backup.el")
 (load "~/.emacs.d/lisp/ace_jump_mode.el")
+(load "~/.emacs.d/lisp/osx.el")
 
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
 
-;; Remove trailing whitespaces
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; https://github.com/syl20bnr/spacemacs/tree/master/contrib/auto-completion
+;; company
+;; company-statistics
 
-;; I prefer cmd key for meta
-(setq mac-option-key-is-meta nil
-      mac-command-key-is-meta t
-      mac-command-modifier 'meta
-      mac-option-modifier 'none)
+;; elisp
+;; Ruby
+;; ClosjureScript
+;; Go
+;; Html
+;; Sass
+;; JavaScript
+
+;; Links
+;; http://mixandgo.com/blog/how-i-ve-convinced-emacs-to-dance-with-ruby
