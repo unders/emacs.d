@@ -10,3 +10,6 @@
 
 (add-hook 'emacs-lisp-mode-hook (lambda ()
 				  (set-syntax-table unders/lisp-syntax-table)))
+
+(require 'elisp-slime-nav)
+(add-hook 'emacs-lisp-mode-hook 'elisp-slime-nav-mode)

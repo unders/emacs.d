@@ -2,3 +2,4 @@ auto-save-list
 ido.last
 .cache
 .cask
+company-statistics-cache.el

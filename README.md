@@ -9,3 +9,7 @@
 
 ### Evil Lisp State
 * https://github.com/syl20bnr/evil-lisp-state
+
+
+### Lisp
+* http://learnxinyminutes.com/docs/elisp/

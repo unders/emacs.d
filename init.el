@@ -2,6 +2,7 @@
 (cask-initialize)
 
 (load "~/.emacs.d/lisp/nochrome.el")
+(load "~/.emacs.d/lisp/company.el")
 (load "~/.emacs.d/lisp/evil.el")
 (load "~/.emacs.d/lisp/evil_lisp_state.el")
 (load "~/.emacs.d/lisp/elisp.el")
@@ -10,22 +11,22 @@
 (load "~/.emacs.d/lisp/fonts.el")
 (load "~/.emacs.d/lisp/themes.el")
 (load "~/.emacs.d/lisp/magit.el")
-(load "~/.emacs.d/lisp/window.el")
 (load "~/.emacs.d/lisp/clipboard.el")
 (load "~/.emacs.d/lisp/guide_key.el")
 (load "~/.emacs.d/lisp/backup.el")
-(load "~/.emacs.d/lisp/ace_jump_mode.el")
 (load "~/.emacs.d/lisp/osx.el")
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+(load "~/.emacs.d/lisp/keybindings.el")
+
+
 ;; https://github.com/syl20bnr/spacemacs/tree/master/contrib/auto-completion
-;; company
 ;; company-statistics
 
 ;; elisp
-;; Ruby
+;; Ruby, inf-ruby
 ;; ClosjureScript
 ;; Go
 ;; Html
