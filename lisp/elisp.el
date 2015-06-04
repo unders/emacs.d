@@ -2,14 +2,12 @@
 (add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
 (add-to-list 'auto-mode-alist '("Cask$" . emacs-lisp-mode))
 
-(defvar unders/lisp-syntax-table
-  (let ((table (make-syntax-table)))
-    (modify-syntax-entry ?_ "w" table)
-    (modify-syntax-entry ?- "w" table)
-    table))
+(defun unders/lisp-hook ()
+  (modify-syntax-entry ?_ "w")
+  (modify-syntax-entry ?/ "w")
+  (modify-syntax-entry ?- "w"))
 
-(add-hook 'emacs-lisp-mode-hook (lambda ()
-				  (set-syntax-table unders/lisp-syntax-table)))
+(add-hook 'emacs-lisp-mode-hook 'unders/lisp-hook)
 
 (require 'elisp-slime-nav)
 (add-hook 'emacs-lisp-mode-hook 'elisp-slime-nav-mode)

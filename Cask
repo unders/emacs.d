@@ -10,6 +10,7 @@
 (depends-on "evil")
 (depends-on "evil-leader")
 (depends-on "evil-lisp-state")
+(depends-on "paredit")
 (depends-on "elisp-slime-nav")
 (depends-on "ace-jump-mode")
 ;; (depends-on "evil-surround")

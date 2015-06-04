@@ -5,7 +5,15 @@
 ;; Elisp
 (evil-leader/set-key-for-mode 'emacs-lisp-mode
   "gg" 'elisp-slime-nav-find-elisp-thing-at-point
-  "hh" 'elisp-slime-nav-describe-elisp-thing-at-point)
+  "hh" 'elisp-slime-nav-describe-elisp-thing-at-point
+  "eb" 'eval-buffer
+  "ee" 'eval-last-sexp
+  "ec" 'unders/eval-current-form
+  "er" 'unders/eval-region
+  "ef" 'eval-defun
+  "tb" 'unders/ert-run-tests-buffer
+  "tq" 'ert)
+
 
 ;; Global
 (evil-leader/set-key
@@ -53,3 +61,4 @@
 ;; https://github.com/syl20bnr/spacemacs/blob/master/doc/CONVENTIONS.md
 ;; https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.md
 ;; http://wttools.sourceforge.net/emacs-stuff/emacs-keybindings.html
+;; https://github.com/syl20bnr/spacemacs/blob/master/spacemacs/keybindings.el

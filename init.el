@@ -4,7 +4,7 @@
 (load "~/.emacs.d/lisp/nochrome.el")
 (load "~/.emacs.d/lisp/company.el")
 (load "~/.emacs.d/lisp/evil.el")
-(load "~/.emacs.d/lisp/evil_lisp_state.el")
+(load "~/.emacs.d/lisp/paredit.el")
 (load "~/.emacs.d/lisp/elisp.el")
 (load "~/.emacs.d/lisp/edit.el")
 (load "~/.emacs.d/lisp/ido.el")
@@ -19,11 +19,9 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+(load "~/.emacs.d/lisp/funcs.el")
+
 (load "~/.emacs.d/lisp/keybindings.el")
-
-
-;; https://github.com/syl20bnr/spacemacs/tree/master/contrib/auto-completion
-;; company-statistics
 
 ;; elisp
 ;; Ruby, inf-ruby
