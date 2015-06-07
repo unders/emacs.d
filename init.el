@@ -1,12 +1,19 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask.el")
 (cask-initialize)
 
+(setq gc-cons-threshold 20000000)
+
 (load "~/.emacs.d/lisp/nochrome.el")
 (load "~/.emacs.d/lisp/company.el")
 (load "~/.emacs.d/lisp/evil.el")
 (load "~/.emacs.d/lisp/paredit.el")
 (load "~/.emacs.d/lisp/elisp.el")
+(load "~/.emacs.d/lisp/exec_path_from_shell.el")
+(load "~/.emacs.d/lisp/inf_clojure.el")
+(load "~/.emacs.d/lisp/cider_clojure.el")
 (load "~/.emacs.d/lisp/edit.el")
+(load "~/.emacs.d/lisp/flycheck.el")
+(load "~/.emacs.d/lisp/visual.el")
 (load "~/.emacs.d/lisp/ido.el")
 (load "~/.emacs.d/lisp/fonts.el")
 (load "~/.emacs.d/lisp/themes.el")
@@ -15,6 +22,7 @@
 (load "~/.emacs.d/lisp/guide_key.el")
 (load "~/.emacs.d/lisp/backup.el")
 (load "~/.emacs.d/lisp/osx.el")
+(load "~/.emacs.d/lisp/projectile.el")
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
@@ -23,10 +31,11 @@
 
 (load "~/.emacs.d/lisp/keybindings.el")
 
-;; elisp
-;; Ruby, inf-ruby
+;; clojure
 ;; ClosjureScript
 ;; Go
+;; projectile
+;; Ruby, inf-ruby
 ;; Html
 ;; Sass
 ;; JavaScript

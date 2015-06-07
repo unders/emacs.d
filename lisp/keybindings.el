@@ -14,6 +14,23 @@
   "tb" 'unders/ert-run-tests-buffer
   "tq" 'ert)
 
+;; Clojure
+(add-hook 'clojure-mode-hook
+	  '(lambda ()
+	     (define-key clojure-mode-map "\C-c\C-k" 'unders/clj-reload-current-ns)
+	     (define-key clojure-mode-map "\C-cl" 'unders/clj-erase-inf-buffer)
+	     (define-key clojure-mode-map "\C-c\C-t" 'clojure-toggle-keyword-string)))
+
+(evil-leader/set-key-for-mode 'clojure-mode
+  "gg" 'unders/clj-find-tag-no-prompt
+  "hh" 'inf-clojure-show-var-documentation
+  "eb" 'inf-clojure-eval-paragraph
+  "ee" 'inf-clojure-eval-last-sexp
+  "ec" 'inf-clojure-eval-defun
+  "er" 'inf-clojure-eval-region
+  "ef" 'inf-clojure-eval-defun
+  )
+
 
 ;; Global
 (evil-leader/set-key

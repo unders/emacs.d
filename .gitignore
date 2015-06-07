@@ -3,3 +3,5 @@ ido.last
 .cache
 .cask
 company-statistics-cache.el
+projectile-bookmarks.eld
+projectile.cache

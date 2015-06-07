@@ -1,4 +1,4 @@
 (set-face-attribute 'default nil
 		     :family "Source Code Pro"
-		     :height 150
+		     :height 160
 		     :weight 'light)

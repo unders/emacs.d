@@ -18,3 +18,25 @@
   (save-buffer)
   (load-file (buffer-file-name))
   (ert t))
+
+
+;; Clojure
+
+(defun unders/clj-reload-current-ns (next-p)
+  (interactive "P")
+  (let ((ns (clojure-find-ns)))
+    (message (format "Loading %s ..." ns))
+    (inf-clojure-eval-string (format "(require '%s :reload)" ns))
+    (when (not next-p) (inf-clojure-eval-string (format "(in-ns '%s)" ns)))))
+
+(defun unders/clj-erase-inf-buffer ()
+  (interactive)
+  (with-current-buffer (get-buffer "*inf-clojure*")
+    (inf-clojure-clear-repl-buffer)))
+
+(defun unders/clj-find-tag-no-prompt ()
+  "Jump to the tag at point without prompting"
+  (interactive)
+  (find-tag (find-tag-default)))
+
+;; Clojure

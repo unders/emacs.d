@@ -16,17 +16,6 @@
 (eval-after-load 'paredit
   '(define-key paredit-mode-map (kbd ";")   'self-insert-command))
 
-(font-lock-add-keywords 'emacs-lisp-mode
-			 '(("(\\|)" . 'esk-paren-face)))
-
-(defface esk-paren-face
-  '((((class color) (background dark))
-     (:foreground "grey50"))
-    (((class color) (background light))
-     (:foreground "grey55")))
-  "Face used to dim parentheses."
-  :group 'starter-kit-faces)
-
 ;; Disable this so that C-k will work for paredit.
 ;; evil-insert-digraph
 (define-key evil-insert-state-map (kbd "C-k") nil)
