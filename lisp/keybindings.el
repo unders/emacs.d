@@ -1,8 +1,46 @@
+;; https://www.masteringemacs.org/article/mastering-key-bindings-emacs
 (evil-leader/set-leader "<SPC>")
 
 (define-key evil-normal-state-map (kbd "SPC SPC") 'ace-jump-mode)
 
+;; Turn off this keybindings in normal mode so
+;; that's possible to jump to code-at-point.
+(define-key evil-normal-state-map (kbd "M-.") nil)
+(define-key evil-normal-state-map (kbd "M-,") nil)
+
+;; Company
+(defun unders/company-mode-add-keys ()
+  (local-set-key (kbd "C-j") 'company-select-next)
+  (local-set-key (kbd "C-k") 'company-select-previous)
+  (local-set-key (kbd "C-l") 'company-complete-selection))
+
+(add-hook 'company-mode-hook 'unders/company-mode-add-keys)
+;; Company
+
+;; Go
+(defun unders/go-mode-add-keys ()
+  (local-set-key (kbd "M-.") 'godef-jump)
+  (local-set-key (kbd "M-,") 'pop-tag-mark)
+  )
+
+(add-hook 'go-mode-hook 'unders/go-mode-add-keys)
+
+(evil-leader/set-key-for-mode 'go-mode
+  "gg" 'godef-jump
+  "gi" 'go-goto-imports
+  "ia" 'go-import-add
+  "hh" 'godoc-at-point
+  "hd" 'godef-describe)
+;; Go
+
 ;; Elisp
+(defun unders/elisp-mode-add-keys ()
+  (local-set-key (kbd "M-.") 'elisp-slime-nav-find-elisp-thing-at-point)
+  (local-set-key (kbd "M-,") 'pop-tag-mark)
+  )
+
+(add-hook 'emacs-lisp-mode-hook 'unders/elisp-mode-add-keys)
+
 (evil-leader/set-key-for-mode 'emacs-lisp-mode
   "gg" 'elisp-slime-nav-find-elisp-thing-at-point
   "hh" 'elisp-slime-nav-describe-elisp-thing-at-point
@@ -13,6 +51,7 @@
   "ef" 'eval-defun
   "tb" 'unders/ert-run-tests-buffer
   "tq" 'ert)
+;; Elisp
 
 ;; Clojure
 (add-hook 'clojure-mode-hook
@@ -33,11 +72,13 @@
 
 
 ;; Global
+;; (global-set-key (kbd "M-,") 'pop-global-mark)
+
 (evil-leader/set-key
-  "gb" 'magit-blame-mode
-  "gl" 'magit-log
-  "gs" 'magit-status
-  "gc" 'magit-commit
+  "mb" 'magit-blame-mode
+  "ml" 'magit-log
+  "ms" 'magit-status
+  "mc" 'magit-commit
   "ff" 'find-file
   "bs" 'switch-to-buffer
   "bk" 'kill-buffer)

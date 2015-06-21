@@ -23,6 +23,7 @@
 (load "~/.emacs.d/lisp/backup.el")
 (load "~/.emacs.d/lisp/osx.el")
 (load "~/.emacs.d/lisp/projectile.el")
+(load "~/.emacs.d/lisp/golang.el")
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
@@ -31,9 +32,9 @@
 
 (load "~/.emacs.d/lisp/keybindings.el")
 
+;; Go
 ;; clojure
 ;; ClosjureScript
-;; Go
 ;; projectile
 ;; Ruby, inf-ruby
 ;; Html

@@ -15,3 +15,7 @@
 * http://emacsredux.com/blog/2015/05/16/learning-emacs-lisp/
 * http://learnxinyminutes.com/docs/elisp/
 * https://github.com/bbatsov/emacs-lisp-style-guide
+
+
+### Configuration
+* https://github.com/svend/dot-emacsd/blob/master/emacs-init.org

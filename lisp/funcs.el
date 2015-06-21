@@ -1,4 +1,4 @@
-;; eval lisp helpers
+;; Eval elisp helpers
 (defun unders/eval-region ()
   (interactive)
   (eval-region (region-beginning) (region-end))
@@ -18,10 +18,9 @@
   (save-buffer)
   (load-file (buffer-file-name))
   (ert t))
-
+;; Eval elisp helpers
 
 ;; Clojure
-
 (defun unders/clj-reload-current-ns (next-p)
   (interactive "P")
   (let ((ns (clojure-find-ns)))
@@ -38,5 +37,4 @@
   "Jump to the tag at point without prompting"
   (interactive)
   (find-tag (find-tag-default)))
-
 ;; Clojure

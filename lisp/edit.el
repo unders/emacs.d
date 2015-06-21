@@ -17,3 +17,6 @@
 
 ;; End all files with newline
 (setq require-final-newline t)
+
+;; Answer y or n instead of yes and no
+(fset 'yes-or-no-p 'y-or-n-p)

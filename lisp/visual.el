@@ -11,3 +11,5 @@
 
 (font-lock-add-keywords 'clojure-mode
 			 '(("(\\|)" . 'esk-paren-face)))
+
+(setq-default tab-width 4)

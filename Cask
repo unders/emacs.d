@@ -9,6 +9,10 @@
 (depends-on "clojure-mode")
 (depends-on "inf-clojure")
 
+(depends-on "go-mode")
+(depends-on "go-eldoc")
+(depends-on "company-go")
+
 (depends-on "dash")
 (depends-on "guide-key")
 (depends-on "evil")

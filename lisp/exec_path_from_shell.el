@@ -4,4 +4,6 @@
 ;; C-h f exec-path-from-shell-initialize
 ;; C-h f exec-path-from-shell-copy-env
 (when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-env "GOPATH")
+  )

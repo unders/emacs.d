@@ -31,31 +31,3 @@
 (require 'company-etags)
 (add-to-list 'company-etags-modes 'clojure-mode)
 (add-hook 'after-init-hook 'global-company-mode)
-
-;; (require 'company)
-;; (add-hook 'after-init-hook 'global-company-mode)
-;; (require 'company-etags)
-;; (add-to-list 'company-etags-modes 'clojure-mode)
-;;
-;; (defun get-clj-completions (prefix)
-;;   (let* ((proc (inferior-lisp-proc))
-;;          (comint-filt (process-filter proc))
-;;          (kept ""))
-;;     (set-process-filter proc (lambda (proc string) (setq kept (concat kept string))))
-;;     (process-send-string proc (format "(complete.core/completions \"%s\")\n"
-;;                                       (substring-no-properties prefix)))
-;;     (while (accept-process-output proc 0.1))
-;;     (setq completions (read kept))
-;;     (set-process-filter proc comint-filt)
-;;     completions))
-;;
-;; (defun company-infclj (command &optional arg &rest ignored)
-;;   (interactive (list 'interactive))
-;;
-;;   (cl-case command
-;;     (interactive (company-begin-backend 'company-infclj))
-;;     (prefix (and (eq major-mode 'inferior-lisp-mode)
-;;                  (company-grab-symbol)))
-;;     (candidates (get-clj-completions arg))))
-;;
-;; (add-to-list 'company-backends 'company-infclj)
