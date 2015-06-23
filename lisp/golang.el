@@ -8,11 +8,10 @@
 
 ;; go-mode      - https://github.com/dominikh/go-mode.el
 ;; lint         - https://github.com/golang/lint
-;; flycheck     - https://github.com/flycheck/flycheck
+;; go-errcheck  - https://github.com/dominikh/go-errcheck.el
 
 ;; gotest       - https://github.com/nlamirault/gotest.el/blob/master/README.md
 ;;              - https://github.com/nlamirault/gotest.el
-;; go-errcheck  - https://github.com/dominikh/go-errcheck.el
 ;; yasnippet-go - https://github.com/dominikh/yasnippet-go
 ;;              - https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/go-mode
 ;; go-rename
@@ -37,5 +36,10 @@
 
   ;; go-eldoc - https://github.com/syohex/emacs-go-eldoc
   ;; go get -u github.com/nsf/gocode
-  (go-eldoc-setup))
+  (go-eldoc-setup)
+
+  ;; flycheck     - https://github.com/flycheck/flycheck
+  (flycheck-mode)
+  (setq flycheck-check-syntax-automatically '(mode-enabled save new-line))
+  )
 (add-hook 'go-mode-hook 'unders/go-mode-setup)

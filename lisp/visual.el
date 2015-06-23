@@ -10,6 +10,9 @@
 			'(("(\\|)" . 'esk-paren-face)))
 
 (font-lock-add-keywords 'clojure-mode
+						'(("(\\|)" . 'esk-paren-face)))
+
+(font-lock-add-keywords 'go-mode
 			 '(("(\\|)" . 'esk-paren-face)))
 
 (setq-default tab-width 4)
