@@ -21,6 +21,9 @@
 (defun unders/go-mode-add-keys ()
   (local-set-key (kbd "M-.") 'godef-jump)
   (local-set-key (kbd "M-,") 'pop-tag-mark)
+  (local-set-key (kbd "C-c c") 'compile)
+  (local-set-key (kbd "C-c C-c") 'recompile)
+  (local-set-key (kbd "C-c C-k") 'kill-compilation)
   )
 
 (add-hook 'go-mode-hook 'unders/go-mode-add-keys)
@@ -28,6 +31,8 @@
 (evil-leader/set-key-for-mode 'go-mode
   "gg" 'godef-jump
   "gi" 'go-goto-imports
+  "cc" 'compile
+  "cr" 'recompile
   "ia" 'go-import-add
   "hh" 'godoc-at-point
   "hd" 'godef-describe)

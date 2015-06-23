@@ -7,9 +7,6 @@
 ;; https://github.com/svend/dot-emacsd/blob/master/emacs-init.org
 
 ;; go-mode      - https://github.com/dominikh/go-mode.el
-;; lint         - https://github.com/golang/lint
-;; go-errcheck  - https://github.com/dominikh/go-errcheck.el
-
 ;; gotest       - https://github.com/nlamirault/gotest.el/blob/master/README.md
 ;;              - https://github.com/nlamirault/gotest.el
 ;; yasnippet-go - https://github.com/dominikh/yasnippet-go
@@ -29,6 +26,9 @@
     (shell-command-to-string "go install")))
 (add-hook 'after-save-hook 'unders/go-mode-before-save)
 
+;; https://docs.google.com/document/d/1SLk36YRjjMgKqe490mSRzOPYEDe0Y_WQNRv-EiFYUyw/view
+(load-file "$GOPATH/src/golang.org/x/tools/cmd/oracle/oracle.el")
+
 (defun unders/go-mode-setup ()
   ;; company-go https://github.com/nsf/gocode/tree/master/emacs-company
   ;; go get -u github.com/nsf/gocode
@@ -38,8 +38,20 @@
   ;; go get -u github.com/nsf/gocode
   (go-eldoc-setup)
 
+  ;; Flycheck Syntax Checkers:
+  ;; go-gofmt
+  ;; go-golint    x
+  ;; go-vet       x
+  ;; go-build     x
+  ;; go-test      ! must test that this works.
+  ;; go-errcheck  x
   ;; flycheck     - https://github.com/flycheck/flycheck
+  ;; http://www.flycheck.org/manual/0.23/Listing-errors.html#Listing-errors
   (flycheck-mode)
   (setq flycheck-check-syntax-automatically '(mode-enabled save new-line))
+
+  ; Customize compile command to run go build
+  (setq compile-command "go generate && go build -v && go test -v && go vet")
+
   )
 (add-hook 'go-mode-hook 'unders/go-mode-setup)

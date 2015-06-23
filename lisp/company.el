@@ -1,7 +1,7 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'after-init-hook 'company-statistics-mode)
 
-(setq company-idle-delay 0.1
+(setq company-idle-delay 0.3
 	  company-minimum-prefix-length 1
 	  company-tooltip-limit 20 ; bigger popup window
 	  company-require-match nil
