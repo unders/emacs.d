@@ -24,6 +24,7 @@
   (local-set-key (kbd "C-c c") 'compile)
   (local-set-key (kbd "C-c C-c") 'recompile)
   (local-set-key (kbd "C-c C-k") 'kill-compilation)
+  (local-set-key (kbd "C-c r") 'go-rename)
   )
 
 (add-hook 'go-mode-hook 'unders/go-mode-add-keys)
@@ -34,7 +35,9 @@
   "cc" 'compile
   "cr" 'recompile
   "ia" 'go-import-add
+  "r" 'go-rename
   "hh" 'godoc-at-point
+  "hl" 'godoc
   "hd" 'godef-describe)
 ;; Go
 

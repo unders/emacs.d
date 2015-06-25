@@ -3,6 +3,9 @@
 
 (setq gc-cons-threshold 20000000)
 
+(load "~/.emacs.d/lib/go/gorename.el")
+;; (load "~/.emacs.d/lib/go/inf_go.el")
+
 (load "~/.emacs.d/lisp/nochrome.el")
 (load "~/.emacs.d/lisp/company.el")
 (load "~/.emacs.d/lisp/evil.el")
@@ -24,6 +27,7 @@
 (load "~/.emacs.d/lisp/osx.el")
 (load "~/.emacs.d/lisp/projectile.el")
 (load "~/.emacs.d/lisp/golang.el")
+(load "~/.emacs.d/lisp/yasnippet.el")
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
