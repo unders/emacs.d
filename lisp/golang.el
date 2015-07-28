@@ -26,7 +26,7 @@
 
 ;; go-oracle
 ;; https://docs.google.com/document/d/1SLk36YRjjMgKqe490mSRzOPYEDe0Y_WQNRv-EiFYUyw/view
-(load-file "$GOPATH/src/golang.org/x/tools/cmd/oracle/oracle.el")
+(load-file "~/go/src/golang.org/x/tools/cmd/oracle/oracle.el")
 
 (defun unders/go-mode-setup ()
   ;; company-go https://github.com/nsf/gocode/tree/master/emacs-company
